@@ -1,0 +1,71 @@
+/* Variables de colores */
+:root {
+    --color-principal: #0d6efd;
+    --color-oscuro: #212529;
+    --color-gris: #f8f9fa;
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos Generales */
+body {
+    font-family: var(--fuente-base);
+    line-height: 1.6;
+}
+
+/* Hero Section con Flexbox */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://picsum.photos/1200/800?grayscale') no-repeat center/cover;
+}
+
+/* Grilla personalizada con CSS Grid */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid .item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-grid .item img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para formularios */
+form {
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    border-color: var(--color-principal);
+}
+
+.form-label {
+    font-weight: bold;
+    color: var(--color-oscuro);
+}
+
+/* Ajuste para que el footer siempre esté abajo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
